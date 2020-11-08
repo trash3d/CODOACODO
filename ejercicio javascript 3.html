@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+function vMail() {
+	email=document.getElementById("email").value;
+	arroba=email.indexOf("@");
+	if(arroba >= 0){document.getElementById("email").style.background="green";}
+	else{document.getElementById("email").style.background="red";}
+}
+</script>
+</head>
+<body>
+
+<form method="POST">
+	<label name="email" >Email</label>
+	<input id="email" type="text" name="email" novalidate onchange="vMail()"></input>
+	<label name="password">Password</label>
+	<input type="password" name="password" required></input>
+	<input type="submit" name="submit">
+</form>
+
+</body>
+
